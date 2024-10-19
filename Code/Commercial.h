@@ -1,6 +1,8 @@
 #ifndef COMMERCIAL_H
 #define COMMERCIAL_H
 
+#include "Visitor.h"
+
 class Commercial {
 
 

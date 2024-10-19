@@ -1,6 +1,8 @@
 #ifndef CVISITOR_H
 #define CVISITOR_H
 
+#include "Visitor.h"
+
 class CVisitor : Visitor {
 
 

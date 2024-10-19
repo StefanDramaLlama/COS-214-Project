@@ -1,6 +1,12 @@
 #ifndef POPULATION_H
 #define POPULATION_H
 
+#include "Observer.h"
+#include "Citizen.h"
+#include "Visitor.h"
+
+class Citizen;
+
 class Population {
 
 private:

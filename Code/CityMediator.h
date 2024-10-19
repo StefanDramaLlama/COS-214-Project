@@ -1,6 +1,9 @@
 #ifndef CITYMEDIATOR_H
 #define CITYMEDIATOR_H
 
+#include "Mediator.h"
+#include "City.h"
+
 class CityMediator : Mediator {
 
 public:
