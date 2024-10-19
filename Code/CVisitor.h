@@ -1,8 +1,10 @@
 #ifndef CVISITOR_H
 #define CVISITOR_H
 
-class CVisitor : Visitor {
+#include "Visitor.h"
 
+
+class CVisitor : public Visitor {
 
 public:
 	void visitCitizens(Population* ele);

@@ -5,7 +5,7 @@ void Government::whatToDo() {
 	throw "Not yet implemented";
 }
 
-Governmanr* Government::instanceGove() {
+Government* Government::instanceGove() {
 	// TODO - implement Government::instanceGove
 	throw "Not yet implemented";
 }

@@ -1,6 +1,9 @@
 #ifndef SAVEANDLOAD_H
 #define SAVEANDLOAD_H
 
+#include "SystemState.h"
+#include "Save.h"
+
 class SaveAndLoad {
 
 private:

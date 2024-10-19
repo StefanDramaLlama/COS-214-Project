@@ -1,7 +1,9 @@
 #ifndef HOUSE_H
 #define HOUSE_H
 
-class House : Residential {
+#include "Residential.h"
+
+class House : public Residential {
 
 
 public:

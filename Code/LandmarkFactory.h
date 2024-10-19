@@ -1,7 +1,9 @@
 #ifndef LANDMARKFACTORY_H
 #define LANDMARKFACTORY_H
 
-class LandmarkFactory : BuildingFactory {
+#include "BuildingFactory.h"
+
+class LandmarkFactory : public BuildingFactory {
 
 
 public:

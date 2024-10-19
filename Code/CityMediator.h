@@ -1,10 +1,13 @@
 #ifndef CITYMEDIATOR_H
 #define CITYMEDIATOR_H
 
-class CityMediator : Mediator {
+#include "Mediator.h"
+#include "City.h"
+
+class CityMediator : public Mediator {
 
 public:
-	City colleagueList;
+	City* colleagueList;
 
 	void notify();
 };

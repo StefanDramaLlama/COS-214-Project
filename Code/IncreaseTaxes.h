@@ -1,7 +1,9 @@
 #ifndef INCREASETAXES_H
 #define INCREASETAXES_H
 
-class IncreaseTaxes : Strategy {
+#include "Strategy.h"
+
+class IncreaseTaxes : public Strategy {
 
 
 public:

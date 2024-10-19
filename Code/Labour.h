@@ -1,7 +1,9 @@
 #ifndef LABOUR_H
 #define LABOUR_H
 
-class Labour : Department {
+#include "Department.h"
+
+class Labour : public Department {
 
 
 public:

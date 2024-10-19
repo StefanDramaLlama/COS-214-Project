@@ -1,7 +1,9 @@
 #ifndef COMMERCIALFACTORY_H
 #define COMMERCIALFACTORY_H
 
-class CommercialFactory : BuildingFactory {
+#include "BuildingFactory.h"
+
+class CommercialFactory : public BuildingFactory {
 
 
 public:

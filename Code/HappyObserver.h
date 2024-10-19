@@ -1,7 +1,10 @@
 #ifndef HAPPYOBSERVER_H
 #define HAPPYOBSERVER_H
 
-class HappyObserver : Observer {
+#include "Observer.h"
+#include "Citizen.h"
+
+class HappyObserver : public Observer {
 
 public:
 	Citizen* subject;

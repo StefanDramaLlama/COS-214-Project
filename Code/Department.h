@@ -4,7 +4,7 @@
 class Department {
 
 private:
-	Department successor;
+	Department* successor;
 
 public:
 	virtual void handle() = 0;

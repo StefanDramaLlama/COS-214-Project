@@ -1,7 +1,9 @@
 #ifndef FINANCES_H
 #define FINANCES_H
 
-class Finances : Department {
+#include "Department.h"
+
+class Finances : public Department {
 
 
 public:

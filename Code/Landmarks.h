@@ -1,6 +1,8 @@
 #ifndef LANDMARKS_H
 #define LANDMARKS_H
 
+#include "Visitor.h"
+
 class Landmarks {
 
 

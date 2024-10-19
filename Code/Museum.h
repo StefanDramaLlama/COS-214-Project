@@ -1,7 +1,9 @@
 #ifndef MUSEUM_H
 #define MUSEUM_H
 
-class Museum : Landmarks {
+#include "Landmarks.h"
+
+class Museum : public Landmarks {
 
 
 public:

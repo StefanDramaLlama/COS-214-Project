@@ -1,5 +1,6 @@
 #ifndef RESIDENTIAL_H
 #define RESIDENTIAL_H
+class Visitor;
 
 class Residential {
 

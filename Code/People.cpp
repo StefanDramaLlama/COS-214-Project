@@ -1,6 +1,6 @@
-#include "Poulation.h"
+#include "People.h"
 
-void Poulation::increaseDisatidfaction() {
+void People::increaseDisatidfaction() {
 	// TODO - implement Poulation::increaseDisatidfaction
 	throw "Not yet implemented";
 }

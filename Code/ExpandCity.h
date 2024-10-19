@@ -1,7 +1,9 @@
 #ifndef EXPANDCITY_H
 #define EXPANDCITY_H
 
-class ExpandCity : Strategy {
+#include "Strategy.h"
+
+class ExpandCity : public Strategy {
 
 
 public:

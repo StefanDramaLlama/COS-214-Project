@@ -1,6 +1,9 @@
 #ifndef VISITOR_H
 #define VISITOR_H
 
+class Population;
+#include "Vehicle.h"
+#include "Section.h"
 class Visitor {
 
 

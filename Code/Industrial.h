@@ -1,7 +1,10 @@
 #ifndef INDUSTRIAL_H
 #define INDUSTRIAL_H
 
-class Industrial : Buildings {
+#include "Buildings.h"
+#include "Visitor.h"
+
+class Industrial : public Buildings {
 
 
 public:
