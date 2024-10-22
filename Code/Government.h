@@ -24,7 +24,13 @@ class Government {
         Government(){};
 
     public:
-        ~Government(){};
+        ~Government(){
+            delete peopleState;
+            delete budgetState;
+            delete disatisfactionState;
+            delete strategy;
+            uniqueInstanceGov = nullptr;
+        };
 
         //Strategy methods
         string implementPolicy(string stateType, Severity* state);
