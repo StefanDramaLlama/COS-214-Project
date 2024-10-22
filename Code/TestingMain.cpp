@@ -18,5 +18,9 @@ TEST_CASE("Composite") {
     test->addSection(test2);
 
     CHECK(test->getSection(0) == building1);
-    CHECK(test->getSection(1) == building1);
+    CHECK(test->getSection(1) == test2);
+
+    test->removeSection(test2);
+
+    CHECK(test->getSection(1) == nullptr);
 }

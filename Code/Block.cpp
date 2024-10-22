@@ -1,6 +1,7 @@
 #include "Block.h"
 
 void Block::addSection(Section* section) {
+	//Come back to to go through the childrent
 	children.push_back(section);
 }
 
