@@ -6,10 +6,17 @@
 #include "Buildings.h"
 #include "Hospital.h"
 
-TEST_CASE("Block class unit tests") {
+TEST_CASE("Composite") {
     Section* test = new Block();
+    Section* test2 = new Block();
 
     Section* building1 = new Hospital();
 
     test->addSection(building1);
+    test2->addSection(building1);
+
+    test->addSection(test2);
+
+    CHECK(test->getSection(0) == building1);
+    CHECK(test->getSection(1) == building1);
 }

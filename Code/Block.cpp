@@ -22,6 +22,11 @@ Section* Block::getSection(int idx){
 	}
 	else
 	{
+		if (idx == children.size()-1)
+		{
+			return children[idx]->getSection(idx);
+		}
+		
 		return nullptr;
 	}
 }
