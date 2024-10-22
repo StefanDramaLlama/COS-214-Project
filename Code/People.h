@@ -16,6 +16,7 @@ class People {
         ~People();
         void setSeverity(Severity* sev);
         void handleSeverity(bool upOrDown);
+        Severity* getState();
 
         void increaseDisatidfaction();
 
