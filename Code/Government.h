@@ -6,19 +6,25 @@
 #include "Disatisfaction.h"
 #include "Strategy.h"
 
+#include <iostream>
+using namespace std;
+
 class Government {
 
-private:
-	People* peopleState;
-	Budget* budgetState;
-	Disatisfaction* disatisfactionState;
-	Strategy* strategy;
-	Government* uniqueInstanceGov;
+    private:
+        People* peopleState;
+        Budget* budgetState;
+        Disatisfaction* disatisfactionState;
+        Strategy* strategy;
+        static Government* uniqueInstanceGov;
 
-public:
-	void whatToDo();
+    protected:
+        Government(){};
 
-	Government* instanceGove();
+    public:
+        void whatToDo();
+
+        static Government* onlyInstance();
 };
 
 #endif
