@@ -1,46 +1,26 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
+#include "Block.h"
+#include "Visitor.h"
+#include "Section.h"
+#include "Buildings.h"
+#include "Hospital.h"
 
-#include <iostream>
+TEST_CASE("Composite") {
+    Section* test = new Block();
+    Section* test2 = new Block();
 
-#include "Severity.h"
-#include "Green.h"
-#include "People.h"
-#include "Budget.h"
-#include "Disatisfaction.h"
-#include "Government.h"
+    Section* building1 = new Hospital();
 
-void testingSeverity();
-void testingSingletonGove();
+    test->addSection(building1);
+    test2->addSection(building1);
 
-int main() {
-    testingSeverity();
-    testingSingletonGove();
-    return 0;
+    test->addSection(test2);
+
+    CHECK(test->getSection(0) == building1);
+    CHECK(test->getSection(1) == test2);
+
+    test->removeSection(test2);
+
+    CHECK(test->getSection(1) == nullptr);
 }
-
-void testingSeverity(){
-
-    People people(new Green());
-    Budget budget(new Green());
-    Disatisfaction dissatisfaction(new Green());
-
-    people.handleSeverity(true);
-    budget.handleSeverity(false);
-    dissatisfaction.handleSeverity(true);
-
-    people.handleSeverity(false);
-    budget.handleSeverity(true);
-    dissatisfaction.handleSeverity(false);
-    dissatisfaction.handleSeverity(false);
-    dissatisfaction.handleSeverity(false);
-    dissatisfaction.handleSeverity(true);
-    dissatisfaction.handleSeverity(true);
-
-}
-
-void testingSingletonGove(){
-    Government* newGovernment = Government::onlyInstance();
-    Government* newGovernment2 = Government::onlyInstance();
-}
-

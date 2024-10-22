@@ -1,6 +1,12 @@
 #include "City.h"
 
+City* City :: uniqueInstanceCity = nullptr;
+
 City* City::instanceCity() {
-	// TODO - implement City::instanceCity
-	throw "Not yet implemented";
+	if (uniqueInstanceCity == nullptr)
+	{
+		uniqueInstanceCity = new City();
+	}
+
+	return uniqueInstanceCity;
 }

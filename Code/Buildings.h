@@ -1,7 +1,8 @@
 #ifndef BUILDINGS_H
 #define BUILDINGS_H
 
-class Buildings {
+#include "Section.h"
+class Buildings : public Section {
 
 protected:
 	int maxCitizens;
@@ -11,6 +12,14 @@ private:
 
 public:
 	int getMaxCitizens();
+
+	void addSection(Section* section);
+
+	void removeSection(Section* section);
+
+	Section* getSection(int idx);
+
+	void acceptVisitor(Visitor* v);
 
 	virtual float taxBuilding() = 0;
 };
