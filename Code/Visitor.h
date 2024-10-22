@@ -3,7 +3,7 @@
 
 class Population;
 #include "Vehicle.h"
-#include "Section.h"
+class Section;
 class Visitor {
 
 

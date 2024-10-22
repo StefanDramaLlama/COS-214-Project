@@ -2,15 +2,20 @@
 #define BLOCK_H
 
 #include "Visitor.h"
-class Block {
+#include "Section.h"
+#include <vector>
 
+class Block : public Section {
+
+private:
+    vector<Section*> children;
 
 public:
-	void addSection(Block otherBlock);
+	void addSection(Section* section);
 
-	void removeSection(Block otherBlock);
+	void removeSection(Section* section);
 
-	Block* getBlock(int idx);
+	Section* getSection(int idx);
 
 	void acceptVisitor(Visitor* v);
 };
