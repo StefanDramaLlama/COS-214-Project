@@ -3,13 +3,22 @@
 
 #include "Severity.h"
 
+class Severity;
+
 class Disatisfaction {
 
-private:
-	Severity* severityDisatisfaction;
+    private:
+        Severity* severity;
 
-public:
-	void lowerTaxes();
+    public:
+        //State methods
+        Disatisfaction(Severity* sev) : severity(sev) {}
+        ~Disatisfaction();
+        void setSeverity(Severity* sev);
+        void handleSeverity(bool upOrDown);
+
+
+        void lowerTaxes();
 };
 
 #endif
