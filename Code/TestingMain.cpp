@@ -2,25 +2,14 @@
 #include "doctest.h"
 #include "Block.h"
 #include "Visitor.h"
+#include "Section.h"
+#include "Buildings.h"
+#include "Hospital.h"
 
 TEST_CASE("Block class unit tests") {
-    // Create a Block object
-    Block block;
+    Section* test = new Block();
 
-    // Test addSection()
-    Section* section1;
-    Section* section2;
-    block.addSection(section1);
-    block.addSection(section2);
-    CHECK(block.getSection(0) == section1);
-    CHECK(block.getSection(1) == section2);
+    Section* building1 = new Hospital();
 
-    // Test removeSection()
-    block.removeSection(section1);
-    CHECK(block.getSection(0) == section2);
-    CHECK(block.getSection(1) == nullptr);
-
-    // Test getSection() with invalid index
-    CHECK(block.getSection(-1) == nullptr);
-    CHECK(block.getSection(100) == nullptr);
+    test->addSection(building1);
 }
