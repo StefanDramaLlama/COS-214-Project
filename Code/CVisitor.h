@@ -7,7 +7,7 @@
 class CVisitor : public Visitor {
 
 public:
-	void visitCitizens(Population* ele);
+	void visitCitizens(Citizen* ele);
 
 	void visitTransport(Vehicle* ele);
 

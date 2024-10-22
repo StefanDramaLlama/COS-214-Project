@@ -24,3 +24,8 @@ TEST_CASE("Composite") {
 
     CHECK(test->getSection(1) == nullptr);
 }
+
+TEST_CASE("Visitor")
+{
+    
+}
