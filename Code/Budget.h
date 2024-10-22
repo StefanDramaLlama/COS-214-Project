@@ -2,13 +2,21 @@
 #define BUDGET_H
 
 #include "Severity.h"
+
 class Budget {
 
-private:
-	Severity* severityBudget;
+    private:
+        Severity* severity;
 
-public:
-	void increaseTaxes();
+    public:
+        //State methods
+        Budget(Severity* sev) : severity(sev) {}
+        ~Budget();
+        void setSeverity(Severity* sev);
+        void handleSeverity(bool upOrDown);
+
+
+        void increaseTaxes();
 };
 
 #endif
