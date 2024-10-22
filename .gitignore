@@ -1,0 +1,7 @@
+.idea/
+CMakeLists.txt
+cmake-build-debug/
+main.cpp
+Main.cpp
+Makefile
+.vscode/
