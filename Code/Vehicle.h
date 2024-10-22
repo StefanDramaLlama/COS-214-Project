@@ -10,7 +10,8 @@ class Vehicle {
 
 protected:
 	int passengerLimit;
-	int cargoSpace;
+	int x;
+	int y;
 	string vehicleType;
 
 public:
