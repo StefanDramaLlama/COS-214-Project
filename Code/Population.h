@@ -14,14 +14,12 @@ private:
 	Citizen* listOfCitizens;
 
 public:
+    Population();
+    Population();
 	void attach(Observer* obs);
-
 	void detach(Observer* obs);
-
 	void notify();
-
 	void allProcreate();
-
 	void acceptVisitor(Visitor* v);
 };
 

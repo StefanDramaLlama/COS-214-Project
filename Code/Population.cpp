@@ -1,5 +1,10 @@
 #include "Population.h"
 
+// Population - Default constructor
+Population::Population(){
+    // TODO - initialsize ObserverList
+}
+
 void Population::attach(Observer* obs) {
 	// TODO - implement People::attach
 	throw "Not yet implemented";

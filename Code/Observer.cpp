@@ -1,6 +1,9 @@
 #include "Observer.h"
 
-void Observer::update() {
-	// TODO - implement Observer::update
-	throw "Not yet implemented";
-}
+// Observer - Default constructor
+Observer::Observer(){}
+
+// void Observer::update() {
+// 	// TODO - implement Observer::update
+// 	throw "Not yet implemented";
+// }

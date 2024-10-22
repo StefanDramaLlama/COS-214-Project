@@ -15,9 +15,13 @@ protected:
 	string employment;
 private:
 	float money;
-	string businessAdress;
+	string businessAddress;
 
 public:
+    Citizen();
+    Citizen(const Citizen& other);
+    float getMoney();
+    string getBusinessAddress();
 	Citizen* procreate();
 };
 
