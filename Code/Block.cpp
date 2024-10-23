@@ -33,5 +33,8 @@ Section* Block::getSection(int idx){
 }
 
 void Block::acceptVisitor(Visitor* v) {
-	v->visitBuilding(this);
+	for (Section* sec : children)
+	{
+		v->visitBuilding(sec);
+	}
 }

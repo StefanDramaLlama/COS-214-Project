@@ -5,10 +5,8 @@
 #include "Section.h"
 #include "Buildings.h"
 #include "Hospital.h"
-<<<<<<< HEAD
 #include "Visitor.h"
 #include "CVisitor.h"
-=======
 #include "People.h"
 #include "Green.h"
 #include "Government.h"
@@ -16,7 +14,6 @@
 #include "ExpandCity.h"
 #include "IncreaseTaxes.h"
 #include "IncreaseWages.h"
->>>>>>> a8859275ad916df150c1eea35b59260eaeb09960
 
 TEST_CASE("Composite") {
     Section* test = new Block();
