@@ -20,5 +20,4 @@ public:
     //updates map and distance matrix
     void printMap();
 };
-
 #endif //GROUPPROJECT_MAP_H
