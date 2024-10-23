@@ -2,7 +2,8 @@
 #define COMMERCIAL_H
 
 #include "Visitor.h"
-class Commercial {
+#include "Buildings.h"
+class Commercial : public Buildings {
 
 
 public:

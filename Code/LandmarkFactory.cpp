@@ -68,7 +68,7 @@ Residential *LandmarkFactory::createComplex()
     return nullptr;
 }
 
-Industrial *LandmarkFactory::createForesty()
+Industrial *LandmarkFactory::createForestry()
 {
     return nullptr;
 }

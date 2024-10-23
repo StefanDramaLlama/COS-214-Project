@@ -1,6 +1,6 @@
 #ifndef BUILDINGS_H
 #define BUILDINGS_H
-
+#include <iostream>
 class Buildings {
 
 protected:

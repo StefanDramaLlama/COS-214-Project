@@ -6,6 +6,7 @@ class Office : public Commercial {
 
 public:
 	float taxBuilding();
+	Office();
 };
 
 #endif

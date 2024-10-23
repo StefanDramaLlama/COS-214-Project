@@ -2,8 +2,8 @@
 #define LANDMARKS_H
 
 #include "Visitor.h"
-
-class Landmarks {
+#include "Buildings.h"
+class Landmarks : public Buildings {
 
 
 public:
