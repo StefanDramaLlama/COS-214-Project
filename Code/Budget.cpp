@@ -20,6 +20,10 @@ void Budget::increaseTaxes() {
 	throw "Not yet implemented";
 }
 
+Severity *Budget::getState() {
+    return this->severity;
+}
+
 Budget::~Budget() {
 
     delete severity;
