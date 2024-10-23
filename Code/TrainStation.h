@@ -1,7 +1,14 @@
 #ifndef TRAINSTATION_H
 #define TRAINSTATION_H
-
-class TrainStation {
+#include <vector>
+#include "Service.h"
+class TrainStation : Service{
+private:
+    vector<TrainStation*> availableStops;
+    vector<int> rideTime;
+    //each rideTime index corresponds with availableStops index to indicate
+    //how much time it takes to ride to each TrainStation from this one
 };
 
 #endif
+
