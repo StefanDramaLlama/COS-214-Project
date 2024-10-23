@@ -2,7 +2,7 @@
 #define ROAD_H
 
 class Road {
-private:
+protected:
     int cost;
 };
 
