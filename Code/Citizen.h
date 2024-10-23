@@ -20,8 +20,22 @@ private:
 public:
     Citizen();
     Citizen(const Citizen& other);
-    float getMoney();
+
+    int getHappiness() const;
+    void setHappiness(int value);
+
+    Residential* getAccommodation() const;
+    void setAccommodation(Residential* acc);
+
+    string getEmployment() const;
+    void setEmployment(string job);
+
+    float getMoney() const;
+    void setMoney(float cash);
+
     string getBusinessAddress();
+    void setBusinessAddress(string address);
+
 	Citizen* procreate();
 };
 

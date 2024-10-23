@@ -1,6 +1,9 @@
 #include "HappyObserver.h"
 
+HappyObserver::HappyObserver(Citizen* subj) : subject(subj) {}
+
 void HappyObserver::update() {
-	// TODO - implement HappyObserver::update
-	throw "Not yet implemented";
+	cout << "Observer: Citizen's happiness is now " << subject->getHappiness() << "!" << endl;
 }
+
+

@@ -2,30 +2,66 @@
 
 // Population - Default constructor
 Population::Population(){
-    // TODO - initialsize ObserverList
+    observerList = new observer[maxObservers];
+    listOfCitizens = new Citizen[maxCitizens];
+
+    for (int i = 0; i < maxObservers; ++i){
+        observerList[i] = nullptr;
+    }
+    
+    for (int i = 0; i < maxCitizens; ++i){
+        listOfCitizens[i] = nullptr;
+    }
 }
 
+// Add observer
 void Population::attach(Observer* obs) {
-	// TODO - implement People::attach
-	throw "Not yet implemented";
+    if (observerCount < maxObservers) {
+        observerList[observerCount++] = obs;
+    } else {
+        cout << "Observer list is full." << endl;
+    }
 }
 
+// Remove observer
 void Population::detach(Observer* obs) {
-	// TODO - implement People::detach
-	throw "Not yet implemented";
+    for (int i = 0; i < observerCount; ++i) {
+        if (observerList[i] == obs) {
+            for (int j = i; j < observerCount - 1; ++j) {
+                observerList[j] = observerList[j + 1];
+            }
+            observerList[--observerCount] = nullptr;
+            break;
+        }
+    }
 }
 
 void Population::notify() {
-	// TODO - implement People::notify
-	throw "Not yet implemented";
+	for (int i = 0; i < observerCount; ++i) {
+        if (observerList[i]) {
+            observerList[i]->update();
+        }
+    }
+}
+
+// Add a new citizen
+void Population::addCitizen(Citizen* citizen) {
+    if (citizenCount < maxCitizens) {
+        listOfCitizens[citizenCount++] = citizen;
+    } else {
+        cout << "Citizen list is full." << endl;
+    }
 }
 
 void Population::allProcreate() {
-	// TODO - implement People::allProcreate
-	throw "Not yet implemented";
+	for (int i = 0; i < citizenCount; ++i) {
+        if (listOfCitizens[i]) {
+            Citizen* newCitizen = listOfCitizens[i]->procreate();
+            addCitizen(newCitizen);                                  // Add the new citizen
+        }
+    }
 }
 
 void Population::acceptVisitor(Visitor* v) {
-	// TODO - implement People::acceptVisitor
-	throw "Not yet implemented";
+	 cout << "Visitor " << visitor << " has become part of the population." << endl;
 }
