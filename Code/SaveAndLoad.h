@@ -3,16 +3,32 @@
 
 #include "SystemState.h"
 #include "Save.h"
+#include "Saves.h"
+
 
 class SaveAndLoad {
 
 private:
 	SystemState* currentSave;
 
+	// FOR TESTING
+	static int dummyInt;
+
 public:
 	Save* createSave();
 
-	void LoadSystem(Save* save);
+	// void SaveSystem(Save *save);
+	void SaveSystem(Saves *saves);
+	void LoadSystem(int saveNum, Saves *saves);
+
+	// FOR TESTING
+	SaveAndLoad();
+	void printCurrentSave();
 };
 
 #endif
+
+/*Visual Paradigm Changes:
+	+ saveSystem(Saves* saves) : void
+	+ loadSystem(saveNum : int, Saves *saves) : void
+*/
