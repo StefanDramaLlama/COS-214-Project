@@ -4,6 +4,7 @@
 
 #ifndef GROUPPROJECT_MAP_H
 #define GROUPPROJECT_MAP_H
+<<<<<<< HEAD
 #include "Cell.h"
 #include <iostream>
 #include <vector>
@@ -21,4 +22,15 @@ public:
 };
 
 
+=======
+
+
+
+class Map {
+
+};
+
+
+
+>>>>>>> 75c68a2392e478c8724a499b8f797ed3a53edf2c
 #endif //GROUPPROJECT_MAP_H
