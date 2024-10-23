@@ -4,10 +4,10 @@
 class City {
 
 private:
-	City* uniqueInstanceCity;
+	static City* uniqueInstanceCity;
 
 public:
-	City* instanceCity();
+	static City* instanceCity();
 };
 
 #endif
