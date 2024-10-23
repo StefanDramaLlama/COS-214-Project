@@ -1,7 +1,7 @@
 #ifndef OFFICE_H
 #define OFFICE_H
-
-class Office {
+#include "Commercial.h"
+class Office : public Commercial {
 
 
 public:

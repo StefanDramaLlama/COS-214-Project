@@ -1,7 +1,7 @@
 #ifndef PARK_H
 #define PARK_H
 
-class Park {
+class Park : public Landmarks {
 
 
 public:

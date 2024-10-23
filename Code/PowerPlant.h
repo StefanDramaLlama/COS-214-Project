@@ -1,7 +1,7 @@
 #ifndef POWERPLANT_H
 #define POWERPLANT_H
-
-class PowerPlant {
+#include "Utilities.h"
+class PowerPlant : public Utilities {
 };
 
 #endif

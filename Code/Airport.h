@@ -1,7 +1,7 @@
 #ifndef AIRPORT_H
 #define AIRPORT_H
-
-class Airport {
+#include "Service.h"
+class Airport : public Service {
 };
 
 #endif

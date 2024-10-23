@@ -1,7 +1,7 @@
 #ifndef TRAINSTATION_H
 #define TRAINSTATION_H
-
-class TrainStation {
+#include "Service.h"
+class TrainStation : public Service{
 };
 
 #endif

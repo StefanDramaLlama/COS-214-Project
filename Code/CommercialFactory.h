@@ -7,11 +7,11 @@ class CommercialFactory : public BuildingFactory {
 
 
 public:
-	void Shop();
+	Commercial* createShop();
 
-	void Office();
+	Commercial* createOffice();
 
-	void Mall();
+	Commercial* createMall();
 };
 
 #endif
