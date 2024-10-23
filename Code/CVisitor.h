@@ -2,6 +2,7 @@
 #define CVISITOR_H
 
 #include "Visitor.h"
+#include <iostream>
 
 
 class CVisitor : public Visitor {

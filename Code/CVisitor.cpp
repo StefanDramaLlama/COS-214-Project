@@ -1,8 +1,7 @@
 #include "CVisitor.h"
 
 void CVisitor::visitCitizens(Citizen* ele) {
-	// TODO - implement CVisitor::visitCitizens
-	throw "Not yet implemented";
+	cout << "Citizen Have been vistesd" << endl;
 }
 
 // void CVisitor::visitTransport(Vehicle* ele) {
@@ -11,6 +10,5 @@ void CVisitor::visitCitizens(Citizen* ele) {
 // }
 
 void CVisitor::visitBuilding(Section* ele) {
-	// TODO - implement CVisitor::visitBuilding
-	throw "Not yet implemented";
+	cout << "Building Have been vistesd" << endl;
 }

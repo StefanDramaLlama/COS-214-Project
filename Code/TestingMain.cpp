@@ -5,6 +5,8 @@
 #include "Section.h"
 #include "Buildings.h"
 #include "Hospital.h"
+#include "Visitor.h"
+#include "CVisitor.h"
 
 TEST_CASE("Composite") {
     Section* test = new Block();
@@ -27,5 +29,15 @@ TEST_CASE("Composite") {
 
 TEST_CASE("Visitor")
 {
+    Section* test = new Block();
+    Section* test2 = new Block();
+
+    Section* building1 = new Hospital();
+
+    test->addSection(building1);
+    test2->addSection(building1);
+
+    test->addSection(test2);
+
     
 }
