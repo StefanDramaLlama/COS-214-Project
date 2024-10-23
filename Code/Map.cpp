@@ -57,4 +57,3 @@ void Map::printMap() {
         cout << endl << endl;
     }
 }
-
