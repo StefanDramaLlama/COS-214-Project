@@ -3,8 +3,6 @@
 //
 
 #include "Map.h"
-<<<<<<< HEAD
-
 Map::Map(vector<vector<Cell*>> map, vector<vector<Cell*>> distanceMatrix)
         : map(map), distanceMatrix(distanceMatrix) {}
 
@@ -59,5 +57,4 @@ void Map::printMap() {
         cout << endl << endl;
     }
 }
-=======
->>>>>>> 75c68a2392e478c8724a499b8f797ed3a53edf2c
+

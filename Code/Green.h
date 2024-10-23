@@ -7,7 +7,7 @@
 class Green : public Severity {
 
     public:
-        string getSeverity();
+        string getSeverity() override;
         Severity *handle(bool increment) override;
 };
 
