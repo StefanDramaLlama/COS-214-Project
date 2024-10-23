@@ -33,5 +33,5 @@ Section* Block::getSection(int idx){
 }
 
 void Block::acceptVisitor(Visitor* v) {
-	
+	v->visitBuilding(this);
 }

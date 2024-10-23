@@ -35,9 +35,9 @@ TEST_CASE("Visitor")
     Section* building1 = new Hospital();
 
     test->addSection(building1);
-    test2->addSection(building1);
+    test->addSection(building1);
 
-    test->addSection(test2);
+    Visitor* vis = new CVisitor();
 
-    
+    test->acceptVisitor(vis);
 }
