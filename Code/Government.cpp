@@ -40,10 +40,10 @@ Government* Government :: uniqueInstanceGov = nullptr;
 Government* Government::onlyInstance() {
     if( uniqueInstanceGov == nullptr){
         uniqueInstanceGov = new Government ();
-        cout << "Your city's Government has been created." << endl;
+        cout << "\033[38;5;39mYour city's Government has been created. \033[0m" << endl;
     }
     else{
-        cout << "There already exists a government. Check the city books in the library to be educated on the ruling of this city" << endl;
+        cout << "\033[38;5;196mThere already exists a government. Check the city books in the library to be educated on the ruling of this city \033[0m" << endl;
     }
 
     return uniqueInstanceGov;

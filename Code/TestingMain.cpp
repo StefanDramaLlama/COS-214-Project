@@ -84,9 +84,14 @@ TEST_CASE("Strategy"){
     newGovernment->setStrategy(increasingWages);
     CHECK("IncreaseWages" == newGovernment->implementPolicyMorale());
 
-    newGovernment->setPeopleState(new People(new Red()));
-
     ExpandCity* expandingCity = new ExpandCity();
+
+    newGovernment->setStrategy(expandingCity);
+    cout << newGovernment->implementPolicyPeople() << endl;
+    CHECK("\033[38;5;210mNo new policy changes\033[0m" == newGovernment->implementPolicyPeople());
+
+
+    newGovernment->setPeopleState(new People(new Red()));
     newGovernment->setStrategy(expandingCity);
     CHECK("ExpandCity" == newGovernment->implementPolicyPeople());
 }

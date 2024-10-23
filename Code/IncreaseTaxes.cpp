@@ -2,8 +2,8 @@
 
 string IncreaseTaxes::implementPolicy(string stateType, string stateColour) {
     if(stateType == "Budget" && stateColour == "Red"){
-        cout << "New policy implemented. Taxes will be raised by 20%" << endl;
+        cout << "\033[38;5;48mNew policy implemented. Taxes will be raised by 20% \033[0m" << endl;
         return "IncreaseTaxes";
     }
-    return "No new policy changes";
+    return "\033[38;5;210mNo new policy changes\033[0m";
 }
