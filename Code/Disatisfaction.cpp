@@ -29,8 +29,3 @@ Disatisfaction::~Disatisfaction() {
 
 }
 
-Disatisfaction::~Disatisfaction() {
-
-    delete this->severity;
-
-}
