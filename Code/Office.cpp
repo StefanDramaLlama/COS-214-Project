@@ -9,8 +9,3 @@ Office::Office()
 {
 	std::cout << "created office" << std::endl;
 }
-
-Office::Office()
-{
-	std::cout << "created office" << std::endl;
-}

@@ -3,10 +3,8 @@
 
 #include "Visitor.h"
 #include "Buildings.h"
-class Landmarks : public Buildings {
 #include "Buildings.h"
 class Landmarks : public Buildings {
-
 
 public:
 	virtual float taxBuilding() = 0;

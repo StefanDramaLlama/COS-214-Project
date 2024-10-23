@@ -9,8 +9,3 @@ float Utilities::taxBuilding()
 {
     return 0.0f;
 }
-
-float Utilities::taxBuilding()
-{
-    return 0.0f;
-}
