@@ -34,7 +34,7 @@ Residential* Citizen::getAccommodation() const{
 }
 
 void Citizen::setAccommodation(Residential* acc){
-    accommodation = *acc;
+    accommodation = acc;
 }
 
 // Citizen - Get Employment

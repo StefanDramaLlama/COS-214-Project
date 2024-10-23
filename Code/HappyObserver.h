@@ -8,7 +8,8 @@ class HappyObserver : public Observer {
 
 public:
 	Citizen* subject;
-
+    HappyObserver();
+    HappyObserver(Citizen* subj);
 	void update();
 };
 

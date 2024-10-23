@@ -19,6 +19,7 @@ private:
 
 public:
     Citizen();
+    Citizen(int happy, Residential* acc, string job, float cash, string addr);
     Citizen(const Citizen& other);
 
     int getHappiness() const;

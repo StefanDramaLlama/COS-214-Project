@@ -1,17 +1,12 @@
 #include "Population.h"
+#include <iostream>
 
 // Population - Default constructor
 Population::Population(){
-    observerList = new observer[maxObservers];
-    listOfCitizens = new Citizen[maxCitizens];
-
     for (int i = 0; i < maxObservers; ++i){
-        observerList[i] = nullptr;
+        observerList[i] = NULL;
     }
     
-    for (int i = 0; i < maxCitizens; ++i){
-        listOfCitizens[i] = nullptr;
-    }
 }
 
 // Add observer
@@ -19,7 +14,7 @@ void Population::attach(Observer* obs) {
     if (observerCount < maxObservers) {
         observerList[observerCount++] = obs;
     } else {
-        cout << "Observer list is full." << endl;
+        std::cout << "Observer list is full." << std::endl;
     }
 }
 
@@ -30,7 +25,7 @@ void Population::detach(Observer* obs) {
             for (int j = i; j < observerCount - 1; ++j) {
                 observerList[j] = observerList[j + 1];
             }
-            observerList[--observerCount] = nullptr;
+            observerList[--observerCount] = NULL;
             break;
         }
     }
@@ -38,7 +33,7 @@ void Population::detach(Observer* obs) {
 
 void Population::notify() {
 	for (int i = 0; i < observerCount; ++i) {
-        if (observerList[i]) {
+        if (observerList[i] != NULL) {
             observerList[i]->update();
         }
     }
@@ -46,25 +41,21 @@ void Population::notify() {
 
 // Add a new citizen
 void Population::addCitizen(Citizen* citizen) {
-    if (citizenCount < maxCitizens) {
-        listOfCitizens[citizenCount++] = citizen;
-    } else {
-        cout << "Citizen list is full." << endl;
-    }
+    listOfCitizens.push_back(citizen);
 }
 
 void Population::allProcreate() {
-	for (int i = 0; i < citizenCount; ++i) {
-        if (listOfCitizens[i]) {
-            Citizen* newCitizen = listOfCitizens[i]->procreate();
-            addCitizen(newCitizen);                                  // Add the new citizen
-        }
-    }
+    std::cout << "All Citizens have procreated." << std::endl;
+    // vector<Citizen*> newCitizens;
+	// for (int i = 0; i < listOfCitizens.size(); ++i) {
+    //     Citizen* newCitizen = listOfCitizens[i]->procreate();
+    //     newCitizens.push_back(newCitizen);                                  // Add the new citizen
+    // }
+    // listOfCitizens.insert(listOfCitizens.end(), newCitizens.begin(), newCitizens.end());
 }
 
 void Population::acceptVisitor(Visitor* v) {
-	for (Citizen* cit : listOfCitizens)
-	{
+	for (Citizen* cit : listOfCitizens){
 		v->visitCitizens(cit);
 	}
 	
