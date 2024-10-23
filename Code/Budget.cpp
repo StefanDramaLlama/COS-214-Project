@@ -29,3 +29,9 @@ Budget::~Budget() {
     delete severity;
 
 }
+
+Budget::~Budget() {
+
+    delete severity;
+
+}
