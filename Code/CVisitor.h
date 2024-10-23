@@ -2,12 +2,13 @@
 #define CVISITOR_H
 
 #include "Visitor.h"
+#include <iostream>
 
 
 class CVisitor : public Visitor {
 
 public:
-	void visitCitizens(Population* ele);
+	void visitCitizens(Citizen* ele);
 
 	void visitTransport(Vehicle* ele);
 

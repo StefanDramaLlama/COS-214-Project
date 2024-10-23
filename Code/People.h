@@ -3,13 +3,23 @@
 
 #include "Severity.h"
 
+class Severity;
+
 class People {
 
-private:
-	Severity* severityPeople;
+    private:
+        Severity* severity;
 
-public:
-	void increaseDisatidfaction();
+    public:
+        //State pattern methods
+        People(Severity* sev) : severity(sev) {}
+        ~People();
+        void setSeverity(Severity* sev);
+        void handleSeverity(bool upOrDown);
+        Severity* getState();
+
+        void increaseDisatidfaction();
+
 };
 
 #endif

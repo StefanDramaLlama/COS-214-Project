@@ -5,13 +5,14 @@
 #include "Visitor.h"
 class Citizen;
 #include <string>
+#include <vector>
 
 using namespace std;
 class Population {
 
 private:
 	Observer* observerList;
-	Citizen* listOfCitizens;
+	vector<Citizen*> listOfCitizens;
 
 public:
 	void attach(Observer* obs);

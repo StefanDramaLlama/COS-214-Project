@@ -1,7 +1,14 @@
 #ifndef GREEN_H
 #define GREEN_H
 
-class Green : Severity {
+#include "Severity.h"
+#include "Yellow.h"
+
+class Green : public Severity {
+
+    public:
+        string getSeverity() override;
+        Severity *handle(bool increment) override;
 };
 
 #endif

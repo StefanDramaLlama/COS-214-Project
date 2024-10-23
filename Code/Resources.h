@@ -8,6 +8,8 @@ private:
 	int energy;
 	int water;
 	float budget;
+    int population;
+    int morale;
 };
 
 #endif

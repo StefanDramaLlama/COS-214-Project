@@ -1,8 +1,9 @@
 #ifndef RESIDENTIAL_H
 #define RESIDENTIAL_H
 class Visitor;
+#include "Buildings.h"
 
-class Residential {
+class Residential : public Buildings {
 
 protected:
 	int numberOfHouseholds;

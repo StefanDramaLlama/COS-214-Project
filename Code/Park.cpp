@@ -9,3 +9,8 @@ Park::Park()
 {
 	std::cout << "created Park" << std::endl;
 }
+
+Park::Park()
+{
+	std::cout << "created Park" << std::endl;
+}
