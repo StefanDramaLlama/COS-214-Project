@@ -63,5 +63,9 @@ void Population::allProcreate() {
 }
 
 void Population::acceptVisitor(Visitor* v) {
-	 cout << "Visitor " << visitor << " has become part of the population." << endl;
+	for (Citizen* cit : listOfCitizens)
+	{
+		v->visitCitizens(cit);
+	}
+	
 }

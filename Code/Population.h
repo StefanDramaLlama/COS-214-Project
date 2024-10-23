@@ -12,12 +12,7 @@ class Population {
 
 private:
 	Observer* observerList;
-    Citizen* listOfCitizens;
-    int maxObservers = 10;
-    int maxCitizens = 10;
-    int observerCount = 0;
-    int citizenCount = 0;
-	
+	vector<Citizen*> listOfCitizens;
 
 public:
     Population();

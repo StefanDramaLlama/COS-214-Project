@@ -20,6 +20,10 @@ People::~People() {
 
 }
 
+Severity *People::getState() {
+    return this->severity;
+}
+
 void People::increaseDisatidfaction() {
     // TODO - implement People::increaseDisatidfaction
     throw "Not yet implemented";

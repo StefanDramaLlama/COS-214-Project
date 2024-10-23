@@ -19,8 +19,13 @@ void Disatisfaction::lowerTaxes() {
 	throw "Not yet implemented";
 }
 
+Severity *Disatisfaction::getState() {
+    return this->severity;
+}
+
 Disatisfaction::~Disatisfaction() {
 
     delete this->severity;
 
 }
+
