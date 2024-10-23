@@ -5,9 +5,9 @@
 
 class ExpandCity : public Strategy {
 
+    public:
+        string implementPolicy(string stateType, string stateColour) override;
 
-public:
-	void whatToDo();
 };
 
 #endif

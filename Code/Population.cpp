@@ -21,6 +21,9 @@ void Population::allProcreate() {
 }
 
 void Population::acceptVisitor(Visitor* v) {
-	// TODO - implement People::acceptVisitor
-	throw "Not yet implemented";
+	for (Citizen* cit : listOfCitizens)
+	{
+		v->visitCitizens(cit);
+	}
+	
 }

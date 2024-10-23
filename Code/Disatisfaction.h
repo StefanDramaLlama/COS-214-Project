@@ -15,6 +15,7 @@ class Disatisfaction {
         Disatisfaction(Severity* sev) : severity(sev) {}
         ~Disatisfaction();
         void setSeverity(Severity* sev);
+        Severity* getState();
         void handleSeverity(bool upOrDown);
 
 
