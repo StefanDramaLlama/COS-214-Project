@@ -5,6 +5,8 @@
 #include "Section.h"
 #include "Buildings.h"
 #include "Hospital.h"
+#include "Visitor.h"
+#include "CVisitor.h"
 #include "People.h"
 #include "Green.h"
 #include "Government.h"
@@ -30,6 +32,21 @@ TEST_CASE("Composite") {
     test->removeSection(test2);
 
     CHECK(test->getSection(1) == nullptr);
+}
+
+TEST_CASE("Visitor")
+{
+    Section* test = new Block();
+    Section* test2 = new Block();
+
+    Section* building1 = new Hospital();
+
+    test->addSection(building1);
+    test->addSection(building1);
+
+    Visitor* vis = new CVisitor();
+
+    test->acceptVisitor(vis);
 }
 
 TEST_CASE("State"){
@@ -95,4 +112,3 @@ TEST_CASE("Strategy"){
     newGovernment->setStrategy(expandingCity);
     CHECK("ExpandCity" == newGovernment->implementPolicyPeople());
 }
-
