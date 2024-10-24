@@ -5,7 +5,6 @@
 #include "ResidentialFactory.h"
 #include "CommercialFactory.h"
 #include "ServiceFactory.h"
-
 #include "Block.h"
 #include "Visitor.h"
 #include "Section.h"
@@ -27,6 +26,7 @@
 #include "Section.h"
 #include "Buildings.h"
 #include "Hospital.h"
+#include "City.h"
 
 TEST_CASE("Factory method") {
     IndustrialFactory i = IndustrialFactory();
@@ -120,6 +120,12 @@ TEST_CASE("Government Singleton"){
     Government newGovernment = Government::onlyInstance();
     Government newGovernment2 = Government::onlyInstance();
 
+}
+
+TEST_CASE("City Singleton"){
+
+    City newCity = City::instanceCity();
+    City newCity2 = City::instanceCity();
 }
 
 TEST_CASE("Strategy"){
