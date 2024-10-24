@@ -69,6 +69,8 @@ TEST_CASE("Factory method") {
     delete serv;
     serv = nullptr;
     serv = s.createTrainStation();
+    delete serv;
+    serv = nullptr;
 
     Utilities* utls = s.createPowerPlant();
     delete utls;
