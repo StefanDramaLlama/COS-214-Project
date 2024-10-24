@@ -1,37 +1,26 @@
-==21815== Memcheck, a memory error detector
-==21815== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==21815== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==21815== Command: ./main
-==21815== Parent PID: 21684
-==21815== 
-==21815== 
-==21815== Process terminating with default action of signal 2 (SIGINT)
-==21815==    at 0x4C38A61: read (read.c:26)
-==21815==    by 0x4BAF794: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:517)
-==21815==    by 0x4BB25C1: _IO_default_uflow (genops.c:362)
-==21815==    by 0x49991C8: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
-==21815==    by 0x49A8051: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
-==21815==    by 0x49A831F: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
-==21815==    by 0x120C91: main (main.cpp:19)
-==21815== 
-==21815== HEAP SUMMARY:
-==21815==     in use at exit: 76,000 bytes in 12 blocks
-==21815==   total heap usage: 14 allocs, 2 frees, 76,024 bytes allocated
-==21815== 
-==21815== 32 bytes in 4 blocks are definitely lost in loss record 2 of 6
-==21815==    at 0x4846FA3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==21815==    by 0x11B5CA: SaveAndLoad::createSave() (SaveAndLoad.cpp:15)
-==21815==    by 0x11B6B7: SaveAndLoad::SaveSystem(Saves*) (SaveAndLoad.cpp:22)
-==21815==    by 0x120D17: main (main.cpp:23)
-==21815== 
-==21815== LEAK SUMMARY:
-==21815==    definitely lost: 32 bytes in 4 blocks
-==21815==    indirectly lost: 0 bytes in 0 blocks
-==21815==      possibly lost: 0 bytes in 0 blocks
-==21815==    still reachable: 75,968 bytes in 8 blocks
-==21815==         suppressed: 0 bytes in 0 blocks
-==21815== Reachable blocks (those to which a pointer was found) are not shown.
-==21815== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==21815== 
-==21815== For lists of detected and suppressed errors, rerun with: -s
-==21815== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==9311== Memcheck, a memory error detector
+==9311== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9311== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==9311== Command: ./main
+==9311== Parent PID: 9183
+==9311== 
+==9311== 
+==9311== HEAP SUMMARY:
+==9311==     in use at exit: 144 bytes in 6 blocks
+==9311==   total heap usage: 183 allocs, 177 frees, 342,495 bytes allocated
+==9311== 
+==9311== 144 (24 direct, 120 indirect) bytes in 3 blocks are definitely lost in loss record 2 of 2
+==9311==    at 0x4846FA3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9311==    by 0x130A62: SaveAndLoad::createSave() (SaveAndLoad.cpp:15)
+==9311==    by 0x130B4F: SaveAndLoad::SaveSystem(Saves*) (SaveAndLoad.cpp:22)
+==9311==    by 0x1358B6: main (main.cpp:23)
+==9311== 
+==9311== LEAK SUMMARY:
+==9311==    definitely lost: 24 bytes in 3 blocks
+==9311==    indirectly lost: 120 bytes in 3 blocks
+==9311==      possibly lost: 0 bytes in 0 blocks
+==9311==    still reachable: 0 bytes in 0 blocks
+==9311==         suppressed: 0 bytes in 0 blocks
+==9311== 
+==9311== For lists of detected and suppressed errors, rerun with: -s
+==9311== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

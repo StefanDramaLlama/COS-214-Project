@@ -11,18 +11,19 @@ class Saves {
 friend class SaveAndLoad;    
     //attributes
     private:
-        vector <Save> saves;
+        vector <Save*> saves;
 
     public:
+        //methods
+        Saves() {};
+        ~Saves() {}; //must delete all saves first
+
+        void storeSave(Save* save);
+        Save* getSave(int index);
+
         // FOR TESTING
-        void printAllSaves()
-        {
-            for (size_t i = 0; i < saves.size(); ++i)
-            {
-                cout << "Save " << i << ": ";
-                saves[i].getSave()->printState();
-            }
-        }
+        void printAllSaves();
+
 };
 
 #endif

@@ -9,9 +9,9 @@ private:
 	SystemState* systemState;
 
 public:
-	SystemState* getSave();
+	SystemState *getSystemState();
 
-	void setSave(SystemState* sState);
+	void setSystemState(SystemState *sState);
 };
 
 #endif

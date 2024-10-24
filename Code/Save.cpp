@@ -1,9 +1,11 @@
 #include "Save.h"
 
-SystemState* Save::getSave() {
+SystemState* Save::getSystemState() {
 	return systemState;
 }
 
-void Save::setSave(SystemState* sState) {
+void Save::setSystemState(SystemState *sState)
+{
 	this->systemState = sState;
 }
+
