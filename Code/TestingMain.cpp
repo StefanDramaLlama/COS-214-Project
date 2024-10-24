@@ -47,7 +47,7 @@ TEST_CASE("Factory method") {
     serv = s.createSchool();
     serv = s.createTownHall();
     serv = s.createTrainStation();
-    
+
     Utilities* utls = s.createPowerPlant();
     utls = s.createWastePlant();
     utls = s.createWaterPlant();
