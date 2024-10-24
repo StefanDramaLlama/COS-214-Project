@@ -95,6 +95,11 @@ TEST_CASE("Visitor")
     Visitor* vis = new CVisitor();
 
     test->acceptVisitor(vis);
+
+    delete vis;
+    delete building1;
+    delete test2;
+    delete test;
 }
 
 TEST_CASE("State"){
