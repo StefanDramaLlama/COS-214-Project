@@ -6,11 +6,20 @@
 class Save {
 
 private:
-	SystemState systemState;
+	SystemState* systemState;
 
-	SystemState* getSave();
+public:
+	SystemState *getSystemState();
 
-	void setSave(SystemState* sState);
+	void setSystemState(SystemState *sState);
 };
 
 #endif
+
+
+/*
+Visual Paradigm Changes:
+	+ getSave() : SystemState*
+	+ setSave(sState : SystemState*) : void
+
+*/

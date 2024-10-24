@@ -5,6 +5,7 @@
 #include "ResidentialFactory.h"
 #include "CommercialFactory.h"
 #include "ServiceFactory.h"
+
 #include "Block.h"
 #include "Visitor.h"
 #include "Section.h"
@@ -26,83 +27,43 @@
 #include "Section.h"
 #include "Buildings.h"
 #include "Hospital.h"
-#include "City.h"
+
+#include "SaveAndLoad.h"
+#include "Saves.h"
 
 TEST_CASE("Factory method") {
     IndustrialFactory i = IndustrialFactory();
     Industrial* p = i.createForestry();
-    delete p;
-    p = nullptr;
     p = i.createSteelFactory();
-    delete p;
-    p = nullptr;
     p = i.createForestry();
-    delete p;
-    p = nullptr;
     p = i.createConcreteFactory();
-    delete p;
-    p = nullptr;
 
     LandmarkFactory l = LandmarkFactory();
     Landmarks* park = l.createPark();
-    delete park;
-    park = nullptr;
     park = l.createMuseum();
-    delete park;
-    park = nullptr;
 
     ServiceFactory s = ServiceFactory();
 
     Service* serv = s.createAirport();
-    delete serv;
-    serv = nullptr;
     serv = s.createHospital();
-    delete serv;
-    serv = nullptr;
     serv = s.createPoliceStation();
-    delete serv;
-    serv = nullptr;
     serv = s.createSchool();
-    delete serv;
-    serv = nullptr;
     serv = s.createTownHall();
-    delete serv;
-    serv = nullptr;
     serv = s.createTrainStation();
-    delete serv;
-    serv = nullptr;
-
+    
     Utilities* utls = s.createPowerPlant();
-    delete utls;
-    utls = nullptr;
     utls = s.createWastePlant();
-    delete utls;
-    utls = nullptr;
     utls = s.createWaterPlant();
-    delete utls;
-    utls = nullptr;
 
     ResidentialFactory r = ResidentialFactory();
     Residential* house = r.createComplex();
-    delete house;
-    house = nullptr;
     house = r.createApartment();
-    delete house;
-    house = nullptr;
     house = r.createHouse();
-    delete house;
-    house = nullptr;
 
     CommercialFactory f = CommercialFactory();
     Commercial* business = f.createMall();
-    delete business;
-    business = nullptr;
     business = f.createShop();
-    delete business;
-    business = nullptr;
     business = f.createOffice();
-    delete business;
-    business = nullptr;
 }
 
 TEST_CASE("Composite") {
@@ -164,12 +125,6 @@ TEST_CASE("Government Singleton"){
 
 }
 
-TEST_CASE("City Singleton"){
-
-    City newCity = City::instanceCity();
-    City newCity2 = City::instanceCity();
-}
-
 TEST_CASE("Strategy"){
     Government newGovernment = Government::onlyInstance();
 
@@ -218,4 +173,44 @@ TEST_CASE("Transport") {
 
     myMap.printMap();
 
+}
+
+TEST_CASE("Saving"){
+    SaveAndLoad saveAndLoad;
+    Saves saves;
+
+    // Test saving a system state
+    saveAndLoad.saveSystem(&saves);
+    CHECK(saves.getSave(0) != nullptr);
+
+    // Test loading a system state
+    saveAndLoad.loadSystem(0, &saves);
+    CHECK(saveAndLoad.getCurrentSystemState() != nullptr);
+
+    // Test printing all saves
+    saves.printAllSaves();
+
+    // Test printing current save
+    saveAndLoad.printCurrentSave();
+
+    // Test invalid save number
+    try
+    {
+        saveAndLoad.loadSystem(1, &saves);
+    }
+    catch (const char *msg)
+    {
+        CHECK(std::string(msg) == "Invalid save number");
+    }
+
+    // Test no saves available
+    Saves emptySaves;
+    try
+    {
+        emptySaves.getSave(0);
+    }
+    catch (const char *msg)
+    {
+        CHECK(std::string(msg) == "No saves available");
+    }
 }

@@ -1,11 +1,11 @@
 #include "Save.h"
 
-SystemState* Save::getSave() {
-	// TODO - implement Save::getSave
-	throw "Not yet implemented";
+SystemState* Save::getSystemState() {
+	return systemState;
 }
 
-void Save::setSave(SystemState* sState) {
-	// TODO - implement Save::setSave
-	throw "Not yet implemented";
+void Save::setSystemState(SystemState *sState)
+{
+	this->systemState = sState;
 }
+
