@@ -24,7 +24,7 @@
 class BuildingFactory {
 
 
-public:
+protected:
 	virtual Service* createHospital() = 0;
 
 	virtual Service* createTownHall() = 0;
