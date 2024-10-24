@@ -18,14 +18,18 @@ Save* SaveAndLoad::createSave() {
 	return save;
 }
 
-void SaveAndLoad::SaveSystem(Saves* saves) {
+void SaveAndLoad::saveSystem(Saves* saves) {
 	Save* save = createSave();
 	saves->storeSave(save);
 }
 
-void SaveAndLoad::LoadSystem(int saveNum, Saves *saves) {
+void SaveAndLoad::loadSystem(int saveNum, Saves *saves) {
 	Save* save = saves->getSave(saveNum);
 	currentSave = save->getSystemState();
+}
+
+SystemState* SaveAndLoad::getCurrentSystemState() {
+	return currentSave;
 }
 
 void SaveAndLoad::printCurrentSave()

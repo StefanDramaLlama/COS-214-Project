@@ -18,9 +18,9 @@ public:
 	Save* createSave();
 
 	// void SaveSystem(Save *save);
-	void SaveSystem(Saves *saves);
-	void LoadSystem(int saveNum, Saves *saves);
-
+	void saveSystem(Saves *saves);
+	void loadSystem(int saveNum, Saves *saves);
+	SystemState* getCurrentSystemState();
 	// FOR TESTING
 	SaveAndLoad();
 	void printCurrentSave();
